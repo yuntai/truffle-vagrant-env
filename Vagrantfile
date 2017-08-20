@@ -36,6 +36,7 @@ Vagrant.configure("2") do |config|
     end
 
     dapps.vm.provision "file", source: "dotscreenrc", destination: "~/.screenrc"
+    dapps.vm.provision "file", source: "dottmuxconf", destination: "~/.tmux.conf"
 
     dapps.vm.provision :shell, path: "bootstrap.sh"
   end
